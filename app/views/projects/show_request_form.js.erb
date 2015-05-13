@@ -1,0 +1,3 @@
+$('#request_form').html('<%= j (render 'requests/form', :project => @project, :request => @project.requests.build) %>');
+            
+$('#request_form').modal();

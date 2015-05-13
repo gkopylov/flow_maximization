@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: flow_maximization_development
+  username: <%= Rails.application.secrets.postgresql['username'] %>
+  password: <%= Rails.application.secrets.postgresql['password'] %>
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: flow_maximization_production
+  username: <%= Rails.application.secrets.postgresql['username'] %>
+  password: <%= Rails.application.secrets.postgresql['password'] %>
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: flow_maximization_test
+  username: <%= Rails.application.secrets.postgresql['username'] %>
+  password: <%= Rails.application.secrets.postgresql['password'] %>
+
+cucumber:
+  <<: *test

@@ -1,0 +1,151 @@
+.selected {
+  color:rgb(189,11,11);
+}
+
+
+/*  these styles are what jsPlumb attaches to the various elements it creates.
+._jsPlumb_connector {
+border:1px solid blue;
+}
+._jsPlumb_endpoint {
+border:1px solid green;
+}
+._jsPlumb_overlay {
+border:1px solid yellow;
+}
+*/
+
+
+.section {
+padding-left:2em;
+font-size:10pt;
+}
+.index.section {
+padding-left:0;
+}
+
+.index {
+width:20em;
+font-size:9pt;
+float:left;
+background-color:#e4eeee;
+overflow:auto;
+padding-left:0.5em;
+}
+
+.index li {
+list-style-type:none;
+}
+
+.index ul, .index h3 {
+padding-left:1.5em;
+
+}
+
+#demo {
+width:80%;
+height:50em;
+margin-left:3em;
+margin-top:3em;
+position:relative;
+}
+
+.sub {
+margin-left:1em;
+}
+
+path, ._jsPlumb_endpoint { cursor:pointer; }
+
+.hover {
+  box-shadow: 2px 2px 19px red;
+   -o-box-shadow: 2px 2px 19px red;
+   -webkit-box-shadow: 2px 2px 19px red;
+   -moz-box-shadow: 2px 2px 19px red;
+}
+
+#demo {
+  margin-top:4em;
+}
+
+.w { 
+  width:5em;
+  padding:1em;
+  position:absolute;
+  border: 1px solid black;
+  z-index:4;
+  border-radius:1em;
+   border:1px solid #346789;
+box-shadow: 2px 2px 19px #e0e0e0;
+-o-box-shadow: 2px 2px 19px #e0e0e0;
+-webkit-box-shadow: 2px 2px 19px #e0e0e0;
+-moz-box-shadow: 2px 2px 19px #e0e0e0;
+-moz-border-radius:0.5em;
+border-radius:0.5em;
+opacity:0.8;
+filter:alpha(opacity=80);
+cursor:move;
+}
+
+.aLabel {
+  background-color:white;
+  opacity:0.8;
+  padding:0.3em;        
+}
+
+.ep {
+  float:right;
+  width:1em;
+  height:1em;
+  background-color:#994466;
+  cursor:pointer;
+}
+
+._jsPlumb_endpoint {
+  z-index:3;
+}
+/*  ._jsPlumb_connector { border:1px solid red; }*/
+
+.dragHover { border:1px dotted red; }
+
+path { cursor:pointer; }
+
+#requests { margin-top: 4em; }
+
+.requests {
+  margin-bottom: 8px;
+  height: 102px;
+  border-radius:0.5em;
+  border:1px solid #346789;
+}
+
+.btn.loading {
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%,
+        color-stop(.25, rgba(0, 0, 0, .10)), 
+        color-stop(.25, transparent),
+        color-stop(.5, transparent), 
+        color-stop(.5, rgba(0, 0, 0, .10)),
+        color-stop(.75, rgba(0, 0, 0, .10)), 
+        color-stop(.75, transparent), 
+        to(transparent));
+    background-image: 
+        -moz-linear-gradient(-45deg, 
+            rgba(0, 0, 0, .10) 25%, 
+            transparent 25%,
+            transparent 50%, rgba(0, 0, 0, .10) 50%, 
+            rgba(0, 0, 0, .10) 75%, 
+            transparent 75%, transparent
+        );
+    background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    -webkit-background-size: 50px 50px;
+    -webkit-animation: animate-stripes 2s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+    from {
+        background-position: 0 0;
+    } 
+    to {
+       background-position: -50px 0;
+    }
+}

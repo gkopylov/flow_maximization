@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: flow_maximization_development
+  timeout: 5000
+  username: flow_maximization
+  password: hardpass
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: flow_maximixation_test
+  timeout: 5000
+  username: flow_maximization
+  password: hardpass

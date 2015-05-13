@@ -1,0 +1,29 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  
+  <h3 id="myModalLabel">Свойства канала</h3>
+</div>
+
+<div class="modal-body"> 
+  <%= form_for connection, :remote => true, :html => { :class => "form-horizontal" } do |f| %>
+    <div class="control-group">
+      <label class="control-label" for="inputCapacity">Пропускная способность</label>
+
+      <div class="controls">
+        <%= f.text_field :capacity, :id => 'inputCapacity' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputCost">Стоимость</label>
+      
+      <div class="controls">
+        <%= f.text_field :cost, :width => 100 %>
+      </div>
+    </div>
+    
+    <div class="modal-footer">
+      <%= f.submit :class => 'btn btn-primary pull-left'  %>
+    </div>
+<% end %>
+</div>

@@ -1,0 +1,9 @@
+<div class="w" id="node_<%= node.id %>" style="left: <%= node.left %>px; top: <%= node.top %>px;">
+  <% if can? :delete, node %>
+    <%= link_to '&times;'.html_safe, project_node_url(@project, node), :class => 'close pull_right',
+      :method => 'delete', :confirm => 'Вы уверены, что хотите удалить ноду?', :remote => true %>
+  <% end %>
+
+  <%= node.id %>
+  <div class="ep"></div>
+</div>

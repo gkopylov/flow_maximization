@@ -1,0 +1,4 @@
+<%= link_to 'Добавить ноду', project_nodes_url(project, :node => { 
+  :left => (((project.nodes.count % 3) == 0) ? 0 : (project.nodes.count % 3)) * 240, 
+  :top => (project.nodes.count / 3) * 140 }), 
+  :remote => true, :method => :post, :id => 'add_node', :class => 'btn', :id => 'add_node' %>

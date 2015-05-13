@@ -1,0 +1,9 @@
+<% if @request.errors.any? %>
+  $('#request_form').html('<%= j (render 'requests/form', :project => @project, :request => @request) %>');
+              
+  $('#request_form').modal();
+<% else %>
+  $('#requests').append('<%= j (render 'request', :request => @request) %>');
+
+  $('#request_form').modal('hide');
+<% end %>

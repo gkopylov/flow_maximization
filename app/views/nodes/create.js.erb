@@ -1,0 +1,9 @@
+$('#demo').append('<%= j render @node %>');
+
+$('#add_node').replaceWith('<%= j (render 'shared/add_node', :project => @node.project) %>'); 
+
+jsPlumb.reset();
+
+jsPlumbDemo.init();
+
+<%= render 'projects/display_connections' %>

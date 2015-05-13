@@ -1,0 +1,7 @@
+<% if @request.errors.any? %>
+
+<% else %>
+  $('#request_<%= @request.id %>').replaceWith('<%= j (render 'request', :request => @request) %>');
+
+  $('#request_form').modal('hide');
+<% end %>

@@ -1,0 +1,23 @@
+<div class="well well-small" id="request_<%= request.id %>">
+  <% if can? :delete, request %>
+    <%= link_to '&times;'.html_safe, project_request_url(request.project, request), 
+      :method => 'delete', :confirm => 'Вы уверены, что хотите удалить запрос?', :class => 'close', :remote => true %>
+  <% end %>
+
+  <% if can? :edit, request %>
+    <%= link_to '<i class="icon-pencil"></i>&nbsp;'.html_safe, edit_project_request_url(request.project, request), 
+      :class => 'pull-right', :remote => true %>
+  <% end %>
+
+  Id: <%= request.id %><br>
+  
+  Исток: <%= request.source_id %><br>
+
+  Сток: <%= request.target_id %><br>
+
+  Размер: <%= request.size %><br>
+
+  Время жизни: <%= request.lifetime %><br>
+
+  Время поступления: <%= request.start_time %>
+</div>

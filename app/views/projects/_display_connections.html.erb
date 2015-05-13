@@ -1,0 +1,21 @@
+$(function () {
+  <% connections_hash, connections_double_hash = @project.connections_hashes %>
+
+  <% costs_graph = @project.costs_graph %>
+
+  jsPlumb.setSuspendDrawing(true);
+
+  <% connections_hash.each do |source_id, target_array| %>
+    <% target_array.each do |target_id| %>
+      <% if source_id.present? && target_id.present? %> 
+        jsPlumb.connect({
+          source:"node_<%= source_id %>", 
+          target:"node_<%= target_id %>"
+          }).getOverlay("label").
+            setLabel('<%= connections_double_hash[source_id][target_id] %>/<%= costs_graph[source_id][target_id] %>');
+      <% end %>
+    <% end %>
+  <% end %>
+
+  jsPlumb.setSuspendDrawing(false, true);
+});

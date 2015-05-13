@@ -1,0 +1,10 @@
+<p class="navbar-text pull-right">
+  <% if user_signed_in? %>
+    Вы вошли как <%= link_to current_user.email, current_user %> | 
+    <%= link_to 'Выйти', destroy_user_session_url %>
+  <% else %>
+    <%= link_to 'Зарегистрироваться', new_user_registration_url %>
+      или
+    <%= link_to 'залогиниться', new_user_session_url %>
+  <% end %>
+</p>

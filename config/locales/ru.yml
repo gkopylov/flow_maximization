@@ -1,0 +1,44 @@
+ru:
+  activerecord:
+    models:
+      user: "пользователь"
+      project: "проект"
+    attributes:
+      user:
+        password: "Пароль"
+        current_sign_in_at: "Текущее время логина"
+        last_sign_in_at: "Последнее время захода"
+        current_sign_in_ip: "Текущий ip"
+        last_sign_in_ip: "ip последнего захода"
+        created_at: "Создан"
+      project:
+        name: "Название"
+        user_id: "Пользователь"
+        created_at: "Дата создания"
+      request:
+        size: "Размер"
+        source_id: "Источник"
+        target_id: "Сток"      
+  helpers:
+    titles:
+      edit: "Редактировать"
+      save: "Сохранить"
+      new: "Новый"
+      delete: "Удалить"
+    actions: "Действия"
+    links:
+      edit: "Редактировать"
+      cancel: "Отменить"
+      new: "Новый"
+      back: "Back"
+      confirm: "Вы уверены?"
+      destroy: "Удалить"
+  views:
+    pagination:
+      first: "&laquo; Первая"
+      last: "Последняя &raquo;"
+      previous: "&lsaquo; Предыдущая"
+      next: "Следующая &rsaquo;"
+      truncate: "..."
+  unauthorized:
+    default: "Для доступа к этой странице нужно авторизоваться"

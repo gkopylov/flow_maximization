@@ -1,0 +1,29 @@
+<div class="well well-small">
+  <p>Общее число запросов: <%= project.requests.size %></p>
+
+  <p>Количество пройденных запросов: <%= project.requests.where(:success => true).size %></p>
+
+  <p>Количество непройденных запросов: <%= project.requests.where('success != ?', true).size %></p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Запрос №</th>
+
+        <th>Пройден</th>
+
+        <th>Путь</th>
+      </tr>
+    </thead>
+  
+    <% project.requests.each do |request| %>
+      <tr>
+        <td><%= request.id %></td>
+        
+        <td><%= request.success == true ? 'Да' : 'Нет' %></td>
+        
+        <td><%= request.path %></td>
+      </tr>
+    <% end %> 
+  </table>
+</div>
