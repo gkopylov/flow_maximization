@@ -46,3 +46,10 @@ group :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
 end
+
+group :production do
+  gem 'rack-cache'
+  gem 'rails_12factor'
+  gem 'puma'
+  gem 'dalli'
+end
