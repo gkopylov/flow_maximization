@@ -37,6 +37,7 @@ group :development, :test do
 end
 
 group :development do 
+  gem 'heroku'
   gem 'quiet_assets' 
   gem 'webrick'
 end
