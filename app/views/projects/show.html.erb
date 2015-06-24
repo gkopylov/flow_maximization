@@ -54,6 +54,8 @@
 
 <% content_for :js do %>
   <%= javascript_tag do %>
-    <%= render 'display_connections' %>
+    $(function() { <%= render 'display_connections' %> });
+
+    $(document).on('page:load', function() { <%= render 'display_connections' %> });
   <% end %>
 <% end %>
