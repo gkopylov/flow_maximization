@@ -24,6 +24,7 @@ gem 'uglifier'
 gem 'figaro'
 gem 'turbolinks'
 gem 'jquery-ui-rails'
+gem 'jquery-turbolinks'
 
 group :development, :test do 
   gem 'factory_girl_rails'
